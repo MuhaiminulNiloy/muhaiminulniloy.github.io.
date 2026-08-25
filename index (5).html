@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MD. Muhaiminul Islam Niloy — Development professional, Dhaka</title>
+<meta name="description" content="Development professional with over five years in education, community engagement and cultural heritage. Associate, Alumni Impact at Teach For Bangladesh. Founder of Folklore Expedition Bangladesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FCFCFA;
+    --ink:#14201D;
+    --soft:#6E7873;
+    --rule:#E2E4DF;
+    --tide:#2E6F62;
+    --indigo:#3D4F8F;
+    --ochre:#A8712A;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px;margin:0 auto;padding:0 28px;}
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--tide);outline-offset:3px;border-radius:2px;}
+
+  .topbar{position:sticky;top:0;z-index:20;background:rgba(252,252,250,.9);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--rule);}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:58px;}
+  .mark{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;}
+  .navlinks{display:flex;gap:22px;}
+  .navlinks a{font-size:13.5px;color:var(--soft);text-decoration:none;}
+  .navlinks a:hover{color:var(--ink);}
+
+  .hero{padding:92px 0 64px;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin:0 0 26px;}
+  h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(2.8rem,8vw,5.8rem);line-height:1;letter-spacing:-.015em;margin:0 0 26px;}
+  .lede{font-size:20px;max-width:56ch;margin:0 0 36px;}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px;}
+  .cta a{
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;
+    text-decoration:none;border:1px solid var(--rule);padding:11px 18px;border-radius:999px;transition:.18s;
+  }
+  .cta a:hover{border-color:var(--ink);}
+  .cta a.solid{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cta a.solid:hover{opacity:.85;}
+  .glance{display:flex;flex-wrap:wrap;gap:34px 56px;border-top:1px solid var(--rule);padding-top:26px;}
+  .glance div{max-width:22ch;}
+  .glance b{display:block;font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:38px;line-height:1;}
+  .glance span{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);display:block;margin-top:9px;line-height:1.5;}
+
+  section{scroll-margin-top:76px;}
+  .band{padding:74px 0;border-top:1px solid var(--rule);}
+  .sechead{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:36px;flex-wrap:wrap;}
+  h2{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:34px;letter-spacing:-.01em;margin:0;}
+  .secnote{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);}
+
+  .index{border-top:1px solid var(--rule);}
+  .item{border-bottom:1px solid var(--rule);position:relative;}
+  .item::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--accent,var(--ink));transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.7,.2,1);}
+  .item:hover::after,.item.open::after{transform:scaleX(1);}
+  .row{width:100%;background:none;border:0;cursor:pointer;text-align:left;color:inherit;font:inherit;display:grid;grid-template-columns:132px 1fr auto;gap:22px;align-items:baseline;padding:22px 4px;}
+  .yr{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.03em;color:var(--soft);white-space:nowrap;}
+  .ttl{font-family:"Instrument Serif",Georgia,serif;font-size:25px;line-height:1.25;display:flex;gap:12px;align-items:baseline;}
+  .dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex:none;transform:translateY(-4px);}
+  .d-folk{background:var(--tide);} .d-edu{background:var(--indigo);} .d-write{background:var(--ochre);}
+  .kind{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--soft);white-space:nowrap;}
+  .panel{overflow:hidden;height:0;transition:height .38s cubic-bezier(.2,.7,.2,1);}
+  .panel-inner{padding:0 4px 30px 154px;max-width:78ch;}
+  .panel-inner ul{margin:0;padding-left:18px;}
+  .panel-inner li{margin-bottom:11px;}
+  .panel-inner li::marker{color:var(--soft);}
+  .org{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.05em;color:var(--soft);margin:0 0 16px;}
+  .subhead{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin:22px 0 10px;}
+  .subhead:first-of-type{margin-top:0;}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 44px;border-top:1px solid var(--rule);}
+  .cardish{padding:22px 0;border-bottom:1px solid var(--rule);}
+  .cardish h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:22px;margin:0 0 5px;line-height:1.3;}
+  .cardish .yr{display:block;margin-bottom:9px;}
+  .cardish p{margin:0;color:var(--soft);font-size:15.5px;}
+
+  .twocol{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;}
+  .twocol p{margin:0 0 18px;max-width:58ch;}
+  .twocol p:first-child{font-size:19px;}
+  .facts{margin:0;}
+  .facts dt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-top:22px;}
+  .facts dt:first-child{margin-top:0;}
+  .facts dd{margin:6px 0 0;font-size:15.5px;line-height:1.55;}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none;}
+  .tags li{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;border:1px solid var(--rule);padding:6px 12px;border-radius:999px;color:var(--soft);}
+
+  .contact p{max-width:52ch;font-size:19px;}
+  .clist{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:12px 30px;}
+  .clist a{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.03em;text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:3px;transition:.18s;}
+  .clist a:hover{border-color:var(--ink);}
+
+  footer{border-top:1px solid var(--rule);padding:30px 0 54px;}
+  footer p{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin:0;}
+
+  @media (max-width:800px){
+    body{font-size:16px;}
+    .navlinks{display:none;}
+    .hero{padding:60px 0 48px;}
+    .band{padding:54px 0;}
+    .row{grid-template-columns:1fr;gap:7px;padding:20px 2px;}
+    .row .kind{grid-row:1;}
+    .yr{order:3;}
+    .ttl{font-size:21px;}
+    .panel-inner{padding-left:2px;}
+    .grid,.twocol{grid-template-columns:1fr;gap:0;}
+    .twocol{gap:38px;}
+    .glance b{font-size:32px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;animation:none !important;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="mark" href="#top">Niloy</a>
+    <nav class="navlinks">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Dhaka, Bangladesh</p>
+      <h1>MD. Muhaiminul<br>Islam Niloy</h1>
+      <p class="lede">Development professional with more than five years across education, community engagement and cultural heritage. I build the systems that keep people learning after a programme ends, and I document the stories that keep communities attached to where they live.</p>
+      <div class="cta">
+        <a class="solid" href="https://www.linkedin.com/in/muhaiminul-niloy/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:muhaiminulniloy23@gmail.com">Email</a>
+        <a href="resume.pdf" download>Download CV</a>
+      </div>
+      <div class="glance">
+        <div><b>398</b><span>Alumni supported at Teach For Bangladesh</span></div>
+        <div><b>1.5M</b><span>People reached through Folklore Expedition</span></div>
+        <div><b>1,200+</b><span>Lessons delivered as a classroom Fellow</span></div>
+        <div><b>150+</b><span>Young people trained through skill building sessions</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="experience">
+    <div class="wrap">
+      <div class="sechead">
+        <h2>Experience</h2>
+        <span class="secnote">Open a role for detail</span>
+      </div>
+      <div class="index">
+
+        <article class="item" style="--accent:var(--indigo)">
+          <button class="row" type="button" aria-expanded="false">
+            <span class="yr">Jul 2024 — now</span>
+            <span class="ttl"><span class="dot d-edu"></span>Associate, Alumni Impact</span>
+            <span class="kind">Teach For Bangladesh</span>
+          </button>
+          <div class="panel"><div class="panel-inner">
+            <p class="org">Dhaka, Bangladesh</p>
+            <p class="subhead">Community and programme</p>
+            <ul>
+              <li>Strengthened engagement across a 398 member alumni community through more than 20 networking events a year and support for 10 community led initiatives, lifting engagement by 25 percent, with 82 percent saying the events helped them reconnect.</li>
+              <li>Planned and facilitated more than 20 professional development sessions and 6 motivational spaces across Dhaka, Chattogram, Cox's Bazar and Rangpur, with over 90 percent rating them relevant and useful.</li>
+              <li>Supported young professionals through post fellowship career transitions with personalised career conversations, and 88 percent moved into impactful roles in the development sector.</li>
+              <li>Leading development of a safeguarding and child protection policy for the alumni community, setting standards, reporting protocols and protective practice across the network.</li>
+              <li>Designed 5 collaborative spaces bringing in around 15 NGOs, INGOs and sector partners, after which 92 percent of participants felt more confident about finishing their Fellowship.</li>
+              <li>Coached 43 Fellows in their final two months by visiting more than 20 partner schools, observing classrooms and giving structured feedback.</li>
+              <li>Sustained partnerships with BRAC Kumon and Orange Corners, including the Teach For Bangladesh and BRAC Kumon exclusive seminar.</li>
+            </ul>
+            <p class="subhead">Systems and measurement</p>
+            <ul>
+              <li>Built a Kirkpatrick aligned monitoring process, analysing feedback from 110 participants across 20 sessions, and produced a Year 2 learning analysis report using third level behaviour tracking data.</li>
+              <li>Built and introduced a set of tools now in use across teams, including an engagement tracker, a competency measurement tool used in Alumni Impact's strategic work, an employment tracker for the two most recent cohorts and a newsletter production system.</li>
+              <li>Created a live directory with editable profiles for all 398 alumni, and maintains records and reporting in Salesforce.</li>
+              <li>Conducted 2 annual alumni surveys with around 350 participants and over 60 percent response, generating actionable community insight.</li>
+              <li>Rebuilt the team's OKRs into a framework that tracks alumni engagement, Fellow development and NPS.</li>
+            </ul>
+            <p class="subhead">Editorial</p>
+            <ul>
+              <li>Wrote, designed and published the alumni newsletter, lifting readership by 30 percent through community stories, opportunities and organisational updates.</li>
+              <li>Pioneered 4 alumni video features, the first of their kind at the organisation, profiling 10 alumni working across the development sector.</li>
+              <li>Served as Alumni Impact lead on Let Girls Thrive with Teach For All, contributing to an impact report covering more than 2,800 girls in Bangladesh.</li>
+              <li>Represented Teach For Bangladesh on a Teach For All call with participants from 12 countries, sharing alumni work on disaster readiness including the 2024 floods.</li>
+            </ul>
+          </div></div>
+        </article>
+
+        <article class="item" style="--accent:var(--tide)">
+          <button class="row" type="button" aria-expanded="false">
+            <span class="yr">Mar 2021 — now</span>
+            <span class="ttl"><span class="dot d-folk"></span>Founder and Head of Research</span>
+            <span class="kind">Folklore Expedition Bangladesh</span>
+          </button>
+          <div class="panel"><div class="panel-inner">
+            <p class="org">Dhaka, Bangladesh</p>
+            <p class="subhead">Research and publishing</p>
+            <ul>
+              <li>Built a cross border, youth led folklore research and public education platform, reaching more than 1.5 million people and an online community of 40,000.</li>
+              <li>Published <em>Talpotro, Ghughu Shoi</em> in February 2025, built on analytical work on Bengali folk rhymes, selling 500 copies across 27 districts of Bangladesh and Kolkata with more than 100 reader reviews.</li>
+              <li>Published <em>Talpotro, Shoroshboti</em> in March 2026, a river issue with fifteen contributing writers covering river narratives from the Sundarbans to Sikkim, water rituals, riverbank festivals, boat songs of the haor region and the names of rivers no longer in common use.</li>
+              <li>Produced more than 500 written pieces and 10 videos countering folklore misconceptions and preserving oral tradition, establishing the organisation as an emerging South Asian folklore research hub.</li>
+              <li>Created a digital archive of over 400 folklore books, the first consolidated resource of its kind in Bangladesh.</li>
+              <li>Conducted six months of ethnographic research in the Sundarbans and presented the findings at the International Conference on Social Sciences and Humanities 2021.</li>
+              <li>Runs ongoing field research and cultural interviews with the Hajong, Shaotal and Mro communities, generating primary documentation and case studies.</li>
+            </ul>
+            <p class="subhead">Partnerships and operations</p>
+            <ul>
+              <li>Research partner to Bok Bok Books in England and The Stove Network in Scotland on <em>When the Geese Come, Lullabies, Creatures and Crossings</em>, an international project supported by the Four Nations International Fund collecting lullabies and folk narratives from refugee, asylum seeking and migrant communities in Middlesbrough and Dumfries and Galloway alongside rural communities in Bangladesh.</li>
+              <li>Directed a feminist reinterpretation of the Bonbibi narrative with Goethe-Institut, Herstory Foundation and Sister Library, drawing over 400 attendees, 89 percent of whom called the event necessary.</li>
+              <li>Mentored a PhD researcher at the University of Florida, with the Bonbibi script adopted as a core dissertation source.</li>
+              <li>Ran a storytelling session with Grow Your Reader Foundation for children in Hijlipara, Byaspur, Gopalganj, drawing 135 attendees at their Gyan Mela with support from Global Fund For Children.</li>
+              <li>Directs team operations and 20 cross border volunteers, and manages 3 annual budgets alongside 5 project budgets.</li>
+              <li>Secured national coverage in The Daily Star and Dhaka Tribune, and built partnerships with Takkhashila Publication, Naya Uddyog, Granthasram, Natural Agriculture Sales Center and AIM Initiative Foundation.</li>
+            </ul>
+          </div></div>
+        </article>
+
+        <article class="item" style="--accent:var(--indigo)">
+          <button class="row" type="button" aria-expanded="false">
+            <span class="yr">Jan 2022 — Dec 2023</span>
+            <span class="ttl"><span class="dot d-edu"></span>Fellow</span>
+            <span class="kind">Teach For Bangladesh</span>
+          </button>
+          <div class="panel"><div class="panel-inner">
+            <p class="org">Dhaka, Bangladesh</p>
+            <ul>
+              <li>Planned and delivered more than 1,200 inclusive lessons and 20 worksheets aligned to the national curriculum, with over 80 percent of students showing positive learning outcomes.</li>
+              <li>Raised attendance from 22 percent to 94 percent through a blended learning system, 20 community visits and 15 parents' meetings reaching nearly 500 community members.</li>
+              <li>Authored a bilingual handbook in Bangla and English on multi hazard risk, covering earthquake and fire safety, flood preparedness and climate hazards, adopted across the school.</li>
+              <li>Established the school's first permanent library of over 800 books with Global Shapers and the alumni network, serving more than 500 students.</li>
+              <li>Launched TeleMon Booth, a social and emotional learning initiative giving around 80 students affected by trauma a safe space for expression.</li>
+              <li>Strengthened child protection by identifying at risk students, coordinating safe referrals and organising 3 expert led counselling sessions, contributing to a 70 percent drop in incidents.</li>
+              <li>Led community outreach under Right to Identity and Heal the World, delivering 16 awareness and hands on sessions plus a student led exhibition, reaching more than 900 participants.</li>
+              <li>Ran two digital literacy workshops for 72 parents, after which over 90 percent could better support their children's learning with technology.</li>
+              <li>Advocated for 12 religious minority students left without proper classes and assessments, securing regular lessons and fair evaluation.</li>
+            </ul>
+          </div></div>
+        </article>
+
+        <article class="item" style="--accent:var(--ochre)">
+          <button class="row" type="button" aria-expanded="false">
+            <span class="yr">Apr 2021 — Sep 2021</span>
+            <span class="ttl"><span class="dot d-write"></span>Copywriter Executive</span>
+            <span class="kind">Bangla Content</span>
+          </button>
+          <div class="panel"><div class="panel-inner">
+            <p class="org">Bangladesh</p>
+            <ul>
+              <li>Wrote and developed content for print, digital and social media, shaping copy that carried a campaign message to its intended audience.</li>
+              <li>Ran market research to understand target audiences and their preferences, and worked with creative teams on campaign ideas and concepts.</li>
+              <li>Edited and proofread copy for accuracy, grammar and consistency of style, and presented work to clients and stakeholders for review.</li>
+            </ul>
+          </div></div>
+        </article>
+
+        <article class="item" style="--accent:var(--tide)">
+          <button class="row" type="button" aria-expanded="false">
+            <span class="yr">Mar 2020</span>
+            <span class="ttl"><span class="dot d-folk"></span>Conservation Intern</span>
+            <span class="kind">Creative Conservation Alliance</span>
+          </button>
+          <div class="panel"><div class="panel-inner">
+            <p class="org">Gazipur, Bangladesh</p>
+            <ul>
+              <li>Supported daily care, feeding and health monitoring for a colony of endangered tortoises in a captive conservation and breeding programme.</li>
+              <li>Kept written and digital health and behaviour logs for individual animals, building structured datasets used to track welfare and catch early signs of illness.</li>
+              <li>Monitored nesting sites in the field, documenting nesting activity and site conditions to support species conservation and breeding objectives.</li>
+            </ul>
+          </div></div>
+        </article>
+
+        <article class="item" style="--accent:var(--indigo)">
+          <button class="row" type="button" aria-expanded="false">
+            <span class="yr">Mar 2017 — Mar 2018</span>
+            <span class="ttl"><span class="dot d-edu"></span>Secretary General</span>
+            <span class="kind">Youth Prochesta Foundation</span>
+          </button>
+          <div class="panel"><div class="panel-inner">
+            <p class="org">Dhaka, Bangladesh</p>
+            <ul>
+              <li>Oversaw operations, policy development, staff supervision, compliance and strategic planning for the organisation.</li>
+              <li>Reduced flood vulnerability through 2 disaster preparedness sessions and 3 relief campaigns reaching more than 4,500 people across five districts in North Bengal.</li>
+              <li>Oversaw 3 core projects, Prochesta School, Food Banking and Blood Bank, from planning through to monitoring.</li>
+              <li>Raised BDT 500,000 by writing 7 grant proposals, sustaining and expanding education and community programmes.</li>
+              <li>Organised 4 medical camps with JCI Bangladesh, providing health and nutrition support to more than 500 people.</li>
+              <li>Managed 50 volunteers, supervised 10 staff and built teacher recruitment systems.</li>
+              <li>Drafted the organisation's Memorandum of Association, setting its governance and operational direction.</li>
+              <li>Ran Project Shabolombi, providing micro loans and training to eight community members, six of whom raised their income by 140 percent.</li>
+            </ul>
+          </div></div>
+        </article>
+
+        <article class="item" style="--accent:var(--indigo)">
+          <button class="row" type="button" aria-expanded="false">
+            <span class="yr">Feb 2016 — Mar 2017</span>
+            <span class="ttl"><span class="dot d-edu"></span>Project Manager</span>
+            <span class="kind">Youth Prochesta Foundation</span>
+          </button>
+          <div class="panel"><div class="panel-inner">
+            <p class="org">Dhaka, Bangladesh</p>
+            <ul>
+              <li>Developed and managed Prochesta School, providing structured education for more than 200 children from extreme poor households in the Hatirjheel slum.</li>
+              <li>Grew enrolment from 33 to 205 through community outreach, better instruction and a survey of 70 households on the barriers families faced.</li>
+              <li>Raised passing rates from 27 percent to 85 percent and retention from 53 percent to 90 percent through targeted academic support, progress monitoring and parent sessions.</li>
+              <li>Co-designed Sponsor A Child, engaging 160 local and international donors contributing around BDT 320,000 a month to keep the school running.</li>
+              <li>Trained 14 teachers and designed structured instructional modules to address inconsistent teaching quality.</li>
+              <li>Built profiles for 205 students plus trackers and dashboards covering learning, attendance and socio-economic data for transparent donor reporting.</li>
+              <li>Created safeguarding and child protection protocols standardising prevention and reporting across the project.</li>
+            </ul>
+          </div></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="projects">
+    <div class="wrap">
+      <div class="sechead">
+        <h2>Projects</h2>
+        <span class="secnote">Designed and led</span>
+      </div>
+      <div class="grid">
+        <article class="cardish">
+          <span class="yr">2026 — 2027</span>
+          <h3>When the Geese Come</h3>
+          <p>Lullabies, creatures and crossings. An international project with Bok Bok Books and The Stove Network, supported by the Four Nations International Fund, collecting lullabies and animal narratives from migrant communities in England, Scotland and rural Bangladesh.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">Mar 2026</span>
+          <h3>Shoroshboti, the river issue</h3>
+          <p>The second Talpotro issue, with fifteen contributing writers on river narratives from the Sundarbans to Sikkim, water rituals, riverbank festivals, boat songs of the haor region and the names of rivers no longer in common use.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">Feb 2025</span>
+          <h3>Ghughu Shoi, the first Talpotro</h3>
+          <p>A periodical built on analytical work on Bengali folk rhymes, sold in 500 copies across 27 districts of Bangladesh and Kolkata, with more than 100 reader reviews.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">Jan 2025 — Nov 2025</span>
+          <h3>Let Girls Thrive</h3>
+          <p>Alumni Impact lead for Teach For Bangladesh, engaging the alumni community on girls' education, leading data collection and analysis, and contributing to an impact report covering more than 2,800 girls nationwide.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">2021 — now</span>
+          <h3>Bonbibi, a feminine lens</h3>
+          <p>A feminist reinterpretation of the Bonbibi narrative with Goethe-Institut, Herstory Foundation and Sister Library, drawing over 400 attendees and now adopted as a research source by a PhD researcher at the University of Florida.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">Mar 2023 — May 2023</span>
+          <h3>Safe Haven</h3>
+          <p>Child protection work at Nurjahan Begum High School, identifying at risk students, coordinating safe referrals and organising 3 expert led counselling sessions for more than 80 children, reducing incidents by 70 percent.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">2023</span>
+          <h3>Heal the World</h3>
+          <p>Six sessions on recycling and environmental awareness at Kamrangir Char, built on hands on activity and closing with a student led exhibition. Full student understanding, 90 percent practical skill gain, and outreach to 480 community members.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">Jun 2022 — Sep 2022</span>
+          <h3>Right to Identity</h3>
+          <p>Ten awareness sessions and community outreach on birth registration at Kamrangir Char, lifting student understanding to 80 percent and reaching 450 community members.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">Jul 2022 — Sep 2023</span>
+          <h3>Boipoka</h3>
+          <p>A portable library of 100 books for students with no access to storybooks, supporting 120 learners and improving reading competency by 80 percent.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">Mar 2022 — Dec 2023</span>
+          <h3>TeleMon Booth</h3>
+          <p>A school based social and emotional learning initiative giving around 80 trauma affected students a safe space for emotional expression and healing.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">2016</span>
+          <h3>Sponsor A Child</h3>
+          <p>Co-designed for Youth Prochesta Foundation, mobilising 160 local and international donors whose monthly contributions sustained the school's operations.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="research">
+    <div class="wrap">
+      <div class="sechead">
+        <h2>Research and writing</h2>
+        <span class="secnote">Conferences and publications</span>
+      </div>
+      <div class="grid">
+        <article class="cardish">
+          <span class="yr">2025</span>
+          <h3>Educating the Whole Child</h3>
+          <p>The role of social and emotional learning as a catalyst in transforming Bangladeshi classrooms. Presented at the TESOL BD-DIU International Conference 2025.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">2025</span>
+          <h3>Teachers' Pedagogical Approaches</h3>
+          <p>Their impact on student outcomes in Bangladeshi primary classrooms. Presented at ICCTASS 2025, the International Conference on Challenges and Trends in Arts and Social Sciences.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">2021</span>
+          <h3>Sundarbans ethnography</h3>
+          <p>Six months of interdisciplinary field research in the mangrove ecosystem, studying how natural calamity and environmental stress shape community belief systems. Presented at the International Conference on Social Sciences and Humanities 2021.</p>
+        </article>
+        <article class="cardish">
+          <span class="yr">Ongoing</span>
+          <h3>Bengali writing</h3>
+          <p>Published under the pen name Muhaiminul Niloy, with work in The Daily Star and Dhaka Tribune, and a Bengali book on folklore in progress.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="about">
+    <div class="wrap">
+      <div class="sechead">
+        <h2>About</h2>
+        <span class="secnote">Short version</span>
+      </div>
+      <div class="twocol">
+        <div>
+          <p>I work in two places that people usually keep apart. One is a classroom system, the other is a forest edge.</p>
+          <p>At Teach For Bangladesh I am an Associate on the Alumni Impact team, where I look after a 398 member alumni community, run the training and facilitation, and design the frameworks that tell us whether any of it is working. I came through the Fellowship myself and taught in Kamrangir Char for two years before that.</p>
+          <p>In 2021 I founded Folklore Expedition Bangladesh, a youth led research and publishing platform that documents oral tradition and folk memory and puts it back in front of people. It has reached more than 1.5 million people, publishes the Bengali periodicals Talpotro and Shoroshboti, and works across ethnic communities on both sides of the border.</p>
+          <p>My first training was in environmental science, and that is where the thinking behind all of it was built. Stories are how people stay attached to a place. When a river shifts or a forest closes, the stories go first, and they take the knowledge with them. The work lines up with the goals on quality education, gender equality, reduced inequalities, climate action and strong institutions.</p>
+          <ul class="tags">
+            <li>Community mobilisation</li>
+            <li>Project management</li>
+            <li>Training and facilitation</li>
+            <li>MEAL and data analysis</li>
+            <li>Child protection and safeguarding</li>
+            <li>Stakeholder coordination</li>
+            <li>Editorial and publishing</li>
+            <li>Budget management</li>
+          </ul>
+        </div>
+        <dl class="facts">
+          <dt>Education</dt>
+          <dd>Post-graduate Diploma, Educational Leadership and School Improvement, BRAC University, 2023</dd>
+          <dd>BSc, Environmental Science with a minor in Anthropology, Independent University Bangladesh, 2020</dd>
+          <dt>Certification</dt>
+          <dd>Natural Disaster and Climate Change Risk Assessment Specialization, IDB and Coursera, 2026</dd>
+          <dd>Ability to Execute Essentials, McKinsey &amp; Company, 2025</dd>
+          <dd>Data Management and Analysis for Cluster Information Management, UNICEF, 2025</dd>
+          <dd>Child Protection and PSHEA Policy, BRAC IED, 2025</dd>
+          <dt>Tools</dt>
+          <dd>Salesforce (advanced), Microsoft Word, Excel and PowerPoint, Google Workspace, Kobo Toolbox, SPSS (working), Canva, CapCut, Adobe Premiere</dd>
+          <dt>Languages</dt>
+          <dd>Bangla (native), English (fluent), Bangla to English translation</dd>
+          <dt>Based in</dt>
+          <dd>Dhaka, Bangladesh</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band contact" id="contact">
+    <div class="wrap">
+      <div class="sechead">
+        <h2>Get in touch</h2>
+        <span class="secnote">Open to opportunities</span>
+      </div>
+      <p>If you are working on education, community programmes, heritage documentation or humanitarian response, write to me.</p>
+      <ul class="clist">
+        <li><a href="mailto:muhaiminulniloy23@gmail.com">muhaiminulniloy23@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/muhaiminul-niloy/" target="_blank" rel="noopener">linkedin.com/in/muhaiminul-niloy</a></li>
+        <li><a href="tel:+8801674895430">+880 1674 895430</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>MD. Muhaiminul Islam Niloy &middot; Dhaka, Bangladesh</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('.item'));
+  items.forEach(function(item){
+    var btn = item.querySelector('.row');
+    var panel = item.querySelector('.panel');
+    btn.addEventListener('click', function(){
+      var open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      panel.style.height = open ? panel.firstElementChild.offsetHeight + 'px' : '0px';
+    });
+    window.addEventListener('resize', function(){
+      if (item.classList.contains('open')) {
+        panel.style.height = panel.firstElementChild.offsetHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
